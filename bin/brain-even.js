@@ -9,7 +9,7 @@ const brainEvenGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   const randomNumbers = Array.from({ length: 3 }, () => Math.floor(Math.random() * 50));
-  let userWin = false;
+  let userWin = true;
 
   for (let i = 0; i < randomNumbers.length; i += 1) {
     console.log(`Question: ${randomNumbers[i]}`);
@@ -23,10 +23,9 @@ const brainEvenGame = () => {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      userWin = false;
       break;
     }
-
-    userWin = true;
   }
 
   const result = (userWin) ? `Congratulations, ${userName}` : `Let's try again, ${userName}`;
