@@ -1,33 +1,21 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import { greeting, getRandomNumbers, showResult } from '../src/utils.js';
+import { gameApplication } from '../src/index.js';
+import { getRandomNumber } from '../src/utils.js';
 
 const brainEvenGame = () => {
-  const userName = greeting();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const randomNumbersArray = getRandomNumbers();
-  let userWin = true;
-
-  for (let i = 0; i < randomNumbersArray.length; i += 1) {
-    console.log(`Question: ${randomNumbersArray[i]}`);
-
-    const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = (randomNumbersArray[i] % 2 === 0) ? 'yes' : 'no';
-
-    if ((randomNumbersArray[i] % 2 === 0) && (userAnswer === 'yes')) {
-      console.log('Correct!');
-    } else if ((randomNumbersArray[i] % 2 !== 0) && (userAnswer === 'no')) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      userWin = false;
-      break;
+  const gameTask = () => {
+    const randomNumber = getRandomNumber();
+    const gameQuestion = `Question: ${randomNumber}`;
+    let correctAnswer = 'no';
+    if (randomNumber % 2 === 0) {
+      correctAnswer = 'yes';
     }
-  }
-
-  console.log(showResult(userWin, userName));
+    return [gameQuestion, correctAnswer];
+  };
+  gameApplication(gameRules, gameTask);
 };
 
 brainEvenGame();
