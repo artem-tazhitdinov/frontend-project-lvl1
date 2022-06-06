@@ -13,6 +13,8 @@ export const getRandomOperator = () => {
 
 export const getUserName = () => readlineSync.question('May I have your name? ');
 
+export const getUserAnswer = () => readlineSync.question('Your answer: ');
+
 export const expressionCalculator = (n1, n2, operator) => {
   if (operator === '+') {
     return n1 + n2;
@@ -22,7 +24,3 @@ export const expressionCalculator = (n1, n2, operator) => {
   }
   return n1 * n2;
 };
-
-export const showResult = (userWin, userName) => (
-  userWin ? `Congratulations, ${userName}` : `Let's try again, ${userName}`
-);
