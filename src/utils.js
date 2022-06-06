@@ -8,16 +8,10 @@ export const getRandomNumber = () => Math.floor(Math.random() * 100);
 
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const sign = operators[Math.floor(Math.random() * operators.length)];
-  return sign;
+  return operators[Math.floor(Math.random() * operators.length)];
 };
 
-export const greeting = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
+export const getUserName = () => readlineSync.question('May I have your name? ');
 
 export const expressionCalculator = (n1, n2, operator) => {
   if (operator === '+') {

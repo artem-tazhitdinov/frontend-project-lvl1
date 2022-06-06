@@ -2,12 +2,12 @@
 
 import readlineSync from 'readline-sync';
 import {
-  getRandomNumber, getRandomOperator, greeting, expressionCalculator, showResult,
+  getRandomNumber, getRandomOperator, expressionCalculator, showResult,
 } from '../src/utils.js';
+import { gameApplication } from '../src/index.js';
 
 const calcGame = () => {
-  const userName = greeting();
-  console.log('What is the result of the expression?');
+  const gameRules = 'What is the result of the expression?';
 
   const gameCounter = 3;
   let userWin = true;
