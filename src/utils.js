@@ -1,9 +1,5 @@
 import readlineSync from 'readline-sync';
 
-export const getRandomNumbers = () => Array.from({ length: 3 }, () => (
-  Math.floor(Math.random() * 50)
-));
-
 export const getRandomNumber = () => Math.floor(Math.random() * 100);
 
 export const getRandomOperator = () => {
