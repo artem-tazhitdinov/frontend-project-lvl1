@@ -1,25 +1,24 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
+import { greeting, getRandomNumbers, showResult } from '../src/utils.js';
 
 const brainEvenGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+  const userName = greeting();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-  const randomNumbers = Array.from({ length: 3 }, () => Math.floor(Math.random() * 50));
+  const randomNumbersArray = getRandomNumbers();
   let userWin = true;
 
-  for (let i = 0; i < randomNumbers.length; i += 1) {
-    console.log(`Question: ${randomNumbers[i]}`);
+  for (let i = 0; i < randomNumbersArray.length; i += 1) {
+    console.log(`Question: ${randomNumbersArray[i]}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = (randomNumbers[i] % 2 === 0) ? 'yes' : 'no';
+    const correctAnswer = (randomNumbersArray[i] % 2 === 0) ? 'yes' : 'no';
 
-    if ((randomNumbers[i] % 2 === 0) && (userAnswer === 'yes')) {
+    if ((randomNumbersArray[i] % 2 === 0) && (userAnswer === 'yes')) {
       console.log('Correct!');
-    } else if ((randomNumbers[i] % 2 !== 0) && (userAnswer === 'no')) {
+    } else if ((randomNumbersArray[i] % 2 !== 0) && (userAnswer === 'no')) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
@@ -28,8 +27,7 @@ const brainEvenGame = () => {
     }
   }
 
-  const result = (userWin) ? `Congratulations, ${userName}` : `Let's try again, ${userName}`;
-  console.log(result);
+  console.log(showResult(userWin, userName));
 };
 
 brainEvenGame();

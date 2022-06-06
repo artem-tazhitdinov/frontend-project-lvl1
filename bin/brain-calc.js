@@ -1,32 +1,16 @@
 #!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
+import {
+  getRandomNumber, getRandomOperator, greeting, expressionCalculator, showResult,
+} from '../src/utils.js';
 
 const calcGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+  const userName = greeting();
   console.log('What is the result of the expression?');
 
   const gameCounter = 3;
   let userWin = true;
-
-  const getRandomNumber = () => Math.floor(Math.random() * 100);
-
-  const getRandomOperator = () => {
-    const operators = ['+', '-', '*'];
-    const sign = operators[Math.floor(Math.random() * operators.length)];
-    return sign;
-  };
-
-  const expressionCalculator = (n1, n2, operator) => {
-    if (operator === '+') {
-      return n1 + n2;
-    }
-    if (operator === '-') {
-      return n1 - n2;
-    }
-    return n1 * n2;
-  };
 
   for (let i = 0; i < gameCounter; i += 1) {
     const n1 = getRandomNumber();
@@ -46,8 +30,7 @@ const calcGame = () => {
       break;
     }
   }
-  const result = (userWin) ? `Congratulations, ${userName}` : `Let's try again, ${userName}`;
-  console.log(result);
+  console.log(showResult(userWin, userName));
 };
 
 calcGame();
