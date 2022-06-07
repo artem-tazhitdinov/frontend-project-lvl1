@@ -3,11 +3,23 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-Игра: "Проверка на чётность"
+## Install
+[![asciicast](https://asciinema.org/a/KRRsC71355hV73bDvnotLCSiR.svg)](https://asciinema.org/a/KRRsC71355hV73bDvnotLCSiR)
+
+____
+
+## Game: "Parity Check"
+
+[![asciicast](https://asciinema.org/a/kmNfcZZ8ifb61RYLb16kLX0jF.svg)](https://asciinema.org/a/kmNfcZZ8ifb61RYLb16kLX0jF)
+
+____
+
+## Game: "Calculator"
+
+[![asciicast](https://asciinema.org/a/g753gSKpYUL3bjPulzpjM2hYR.svg)](https://asciinema.org/a/g753gSKpYUL3bjPulzpjM2hYR)
+
+____
+
+## Game: "Greatest common divisor"
+
 [![asciicast](https://asciinema.org/a/awbcvVVL001oWuh4zojG0zyMP.svg)](https://asciinema.org/a/awbcvVVL001oWuh4zojG0zyMP)
-
-Игра: "Калькулятор"
-[![asciicast](https://asciinema.org/a/ODyJuHsQYUxZq91hlmnnVG5Sv.svg)](https://asciinema.org/a/ODyJuHsQYUxZq91hlmnnVG5Sv)
-
-Игра "НОД"
-[![asciicast](https://asciinema.org/a/ODyJuHsQYUxZq91hlmnnVG5Sv.svg)](https://asciinema.org/a/ODyJuHsQYUxZq91hlmnnVG5Sv)
