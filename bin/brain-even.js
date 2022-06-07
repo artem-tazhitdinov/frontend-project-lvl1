@@ -15,6 +15,7 @@ const brainEvenGame = () => {
     }
     return [gameQuestion, correctAnswer];
   };
+
   gameApplication(gameRules, gameTask);
 };
 

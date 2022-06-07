@@ -5,6 +5,7 @@ import { getRandomNumber, getRandomOperator, expressionCalculator } from '../src
 
 const calcGame = () => {
   const gameRules = 'What is the result of the expression?';
+
   const gameTask = () => {
     const n1 = getRandomNumber();
     const n2 = getRandomNumber();
