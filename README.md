@@ -19,5 +19,5 @@
 ## Game: "Progression"
 [![asciicast](https://asciinema.org/a/L9A3445SbfmE9wa7D5wmmbfGf.svg)](https://asciinema.org/a/L9A3445SbfmE9wa7D5wmmbfGf)
 
-## Game: "Is parity?"
+## Game: "Is prime?"
 [![asciicast](https://asciinema.org/a/wB7m4dCeVzwyfvnSVioSkErDq.svg)](https://asciinema.org/a/wB7m4dCeVzwyfvnSVioSkErDq)
