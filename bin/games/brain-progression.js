@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { gameApplication } from '../src/index.js';
-import { getRandomNumber } from '../src/utils.js';
+import { gameApplication } from '../../src/index.js';
+import { getRandomNumber } from '../../src/utils.js';
 
 const progressionGame = () => {
   const gameRules = 'What number is missing in the progression?';

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { gameApplication } from '../src/index.js';
-import { getRandomNumber, getRandomOperator, expressionCalculator } from '../src/utils.js';
+import { gameApplication } from '../../src/index.js';
+import { getRandomNumber, getRandomOperator, expressionCalculator } from '../../src/utils.js';
 
 const calcGame = () => {
   const gameRules = 'What is the result of the expression?';

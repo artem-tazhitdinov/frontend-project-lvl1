@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { gameApplication } from '../src/index.js';
-import { getRandomNumber } from '../src/utils.js';
+import { gameApplication } from '../../src/index.js';
+import { getRandomNumber } from '../../src/utils.js';
 
-const brainEvenGame = () => {
+const evenGame = () => {
   const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const gameTask = () => {
@@ -19,4 +19,4 @@ const brainEvenGame = () => {
   gameApplication(gameRules, gameTask);
 };
 
-brainEvenGame();
+evenGame();
