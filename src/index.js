@@ -8,7 +8,7 @@ export const gameApplication = (gameRules, gameTask) => {
 
   for (let i = 0; i < 3; i += 1) {
     const [gameQuestion, correctAnswer] = gameTask();
-    console.log(gameQuestion);
+    console.log(`Question: ${gameQuestion}`);
 
     const userAnswer = getUserAnswer();
     if (userAnswer === correctAnswer) {

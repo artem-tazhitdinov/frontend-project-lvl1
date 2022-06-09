@@ -9,7 +9,7 @@ const gcdGame = () => {
   const gameTask = () => {
     let n1 = getRandomNumber();
     let n2 = getRandomNumber();
-    const gameQuestion = `Question: ${n1} ${n2}`;
+    const gameQuestion = `${n1} ${n2}`;
     while (n1 !== n2) {
       if (n1 > n2) {
         n1 -= n2;

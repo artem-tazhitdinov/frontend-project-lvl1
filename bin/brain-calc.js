@@ -10,7 +10,7 @@ const calcGame = () => {
     const n1 = getRandomNumber();
     const n2 = getRandomNumber();
     const operator = getRandomOperator();
-    const gameQuestion = `Question: ${n1} ${operator} ${n2}`;
+    const gameQuestion = `${n1} ${operator} ${n2}`;
     const correctAnswer = expressionCalculator(n1, n2, operator);
     return [gameQuestion, correctAnswer.toString()];
   };
