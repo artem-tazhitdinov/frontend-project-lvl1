@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { gameApplication } from '../../src/index.js';
+import gameApplication from '../../src/index.js';
 import { getRandomNumber, getRandomOperator, expressionCalculator } from '../../src/utils.js';
 
 const calcGame = () => {
