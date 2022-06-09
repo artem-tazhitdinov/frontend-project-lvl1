@@ -8,7 +8,7 @@ const isPrimeGame = () => {
 
   const gameTask = () => {
     const randomNumber = getRandomNumber();
-    const gameQuestion = `${randomNumber}`;
+    const gameQuestion = randomNumber;
     const correctAnswer = (isPrime(randomNumber)) ? 'yes' : 'no';
     return [gameQuestion, correctAnswer];
   };

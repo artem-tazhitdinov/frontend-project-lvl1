@@ -8,7 +8,7 @@ const brainEvenGame = () => {
 
   const gameTask = () => {
     const randomNumber = getRandomNumber();
-    const gameQuestion = `${randomNumber}`;
+    const gameQuestion = randomNumber;
     let correctAnswer = 'no';
     if (randomNumber % 2 === 0) {
       correctAnswer = 'yes';
