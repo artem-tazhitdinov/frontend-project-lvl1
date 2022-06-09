@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const getRandomNumber = () => Math.floor(Math.random() * 100);
+export const getRandomNumber = (n = 100) => Math.floor(Math.random() * n);
 
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];

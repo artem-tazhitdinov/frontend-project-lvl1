@@ -6,20 +6,15 @@
 ## Install
 [![asciicast](https://asciinema.org/a/KRRsC71355hV73bDvnotLCSiR.svg)](https://asciinema.org/a/KRRsC71355hV73bDvnotLCSiR)
 
-____
-
 ## Game: "Parity Check"
-
 [![asciicast](https://asciinema.org/a/kmNfcZZ8ifb61RYLb16kLX0jF.svg)](https://asciinema.org/a/kmNfcZZ8ifb61RYLb16kLX0jF)
 
-____
 
 ## Game: "Calculator"
-
 [![asciicast](https://asciinema.org/a/g753gSKpYUL3bjPulzpjM2hYR.svg)](https://asciinema.org/a/g753gSKpYUL3bjPulzpjM2hYR)
 
-____
-
 ## Game: "Greatest common divisor"
-
 [![asciicast](https://asciinema.org/a/awbcvVVL001oWuh4zojG0zyMP.svg)](https://asciinema.org/a/awbcvVVL001oWuh4zojG0zyMP)
+
+## Game: "Progression"
+[![asciicast](https://asciinema.org/a/L9A3445SbfmE9wa7D5wmmbfGf.svg)](https://asciinema.org/a/L9A3445SbfmE9wa7D5wmmbfGf)
