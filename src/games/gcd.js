@@ -18,6 +18,7 @@ const gcdGame = () => {
     const correctAnswer = n1.toString();
     return [gameQuestion, correctAnswer];
   };
+
   gameApplication(gameRules, gameTask);
 };
 

@@ -4,21 +4,28 @@ import { getRandomNumber } from '../utils.js';
 const progressionGame = () => {
   const gameRules = 'What number is missing in the progression?';
 
-  const gameTask = () => {
-    const progressionStep = getRandomNumber(15);
-    const progressionBegin = getRandomNumber();
+  const createProgression = (step, beginFrom, missingStep) => {
     const progressionArray = [];
+    progressionArray.push(beginFrom);
+
+    for (let i = 0; i < 9; i += 1) {
+      progressionArray.push(progressionArray[i] + step);
+    }
+
+    const valueOfMissingStep = progressionArray[missingStep].toString();
+    progressionArray[missingStep] = '..';
+    return [progressionArray.join(' '), valueOfMissingStep];
+  };
+
+  const gameTask = () => {
+    const progStep = getRandomNumber(15);
+    const progBegin = getRandomNumber();
     const missingStep = getRandomNumber(10);
 
-    progressionArray.push(progressionBegin);
-    for (let i = 0; i < 9; i += 1) {
-      progressionArray.push(progressionArray[i] + progressionStep);
-    }
-    const correctAnswer = progressionArray[missingStep].toString();
-    progressionArray[missingStep] = '..';
-    const gameQuestion = progressionArray.join(' ');
+    const [gameQuestion, correctAnswer] = createProgression(progStep, progBegin, missingStep);
     return [gameQuestion, correctAnswer];
   };
+
   gameApplication(gameRules, gameTask);
 };
 

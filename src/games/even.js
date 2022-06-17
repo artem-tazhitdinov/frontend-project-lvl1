@@ -1,16 +1,14 @@
 import gameApplication from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
+const isEven = (number) => number % 2 === 0;
+
 const evenGame = () => {
   const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const gameTask = () => {
-    const randomNumber = getRandomNumber();
-    const gameQuestion = randomNumber;
-    let correctAnswer = 'no';
-    if (randomNumber % 2 === 0) {
-      correctAnswer = 'yes';
-    }
+    const gameQuestion = getRandomNumber();
+    const correctAnswer = isEven(gameQuestion) ? 'yes' : 'no';
     return [gameQuestion, correctAnswer];
   };
 
