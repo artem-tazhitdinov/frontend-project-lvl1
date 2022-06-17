@@ -4,8 +4,8 @@ import { getRandomByRange } from '../utils.js';
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const getGameTask = () => {
-  let n1 = getRandomByRange();
-  let n2 = getRandomByRange();
+  let n1 = getRandomByRange(1);
+  let n2 = getRandomByRange(1);
   const gameQuestion = `${n1} ${n2}`;
 
   while (n1 !== n2) {

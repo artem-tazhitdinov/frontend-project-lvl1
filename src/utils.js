@@ -1,6 +1,9 @@
 import readlineSync from 'readline-sync';
 
-export const getRandomByRange = (n = 100) => Math.floor(Math.random() * n);
+export const getRandomByRange = (min = 1, max = 100) => {
+  const result = Math.floor(Math.random() * (max - min + 1) + min);
+  return result;
+};
 
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
