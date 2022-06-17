@@ -1,15 +1,15 @@
 import { getUserName, getUserAnswer } from './utils.js';
 
-const runGameApplication = (gameRules, gameTask) => {
+const runGameApplication = (gameRule, getGameTask) => {
   const gameRounds = 3;
 
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
   console.log(`Hello, ${userName}!`);
-  console.log(gameRules);
+  console.log(gameRule);
 
   for (let i = 0; i < gameRounds; i += 1) {
-    const [gameQuestion, correctAnswer] = gameTask();
+    const [gameQuestion, correctAnswer] = getGameTask();
     console.log(`Question: ${gameQuestion}`);
 
     const userAnswer = getUserAnswer();

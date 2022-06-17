@@ -15,16 +15,16 @@ const isPrime = (number) => {
   return true;
 };
 
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const getGameTask = () => {
+  const gameQuestion = getRandomByRange();
+  const correctAnswer = isPrime(gameQuestion) ? 'yes' : 'no';
+  return [gameQuestion, correctAnswer];
+};
+
 const isPrimeGame = () => {
-  const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-  const gameTask = () => {
-    const gameQuestion = getRandomByRange();
-    const correctAnswer = isPrime(gameQuestion) ? 'yes' : 'no';
-    return [gameQuestion, correctAnswer];
-  };
-
-  runGameApp(gameRules, gameTask);
+  runGameApp(gameRule, getGameTask);
 };
 
 export default isPrimeGame;
