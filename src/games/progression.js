@@ -20,7 +20,6 @@ const getGameTask = () => {
   const progStep = getRandomByRange(2, 15);
   const progBegin = getRandomByRange();
   const missingStep = getRandomByRange(0, 9);
-  console.log(progStep, progBegin, missingStep);
   const [gameQuestion, correctAnswer] = createProgression(progStep, progBegin, missingStep);
   return [gameQuestion, correctAnswer];
 };
