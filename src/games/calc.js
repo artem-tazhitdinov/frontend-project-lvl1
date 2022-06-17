@@ -1,7 +1,5 @@
-#!/usr/bin/env node
-
-import gameApplication from '../../src/index.js';
-import { getRandomNumber, getRandomOperator, expressionCalculator } from '../../src/utils.js';
+import gameApplication from '../index.js';
+import { getRandomNumber, getRandomOperator, expressionCalculator } from '../utils.js';
 
 const calcGame = () => {
   const gameRules = 'What is the result of the expression?';
@@ -18,4 +16,4 @@ const calcGame = () => {
   gameApplication(gameRules, gameTask);
 };
 
-calcGame();
+export default calcGame;

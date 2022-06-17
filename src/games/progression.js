@@ -1,7 +1,5 @@
-#!/usr/bin/env node
-
-import gameApplication from '../../src/index.js';
-import { getRandomNumber } from '../../src/utils.js';
+import gameApplication from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const progressionGame = () => {
   const gameRules = 'What number is missing in the progression?';
@@ -23,4 +21,5 @@ const progressionGame = () => {
   };
   gameApplication(gameRules, gameTask);
 };
-progressionGame();
+
+export default progressionGame;

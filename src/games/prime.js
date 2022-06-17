@@ -1,7 +1,5 @@
-#!/usr/bin/env node
-
-import gameApplication from '../../src/index.js';
-import { getRandomNumber, isPrime } from '../../src/utils.js';
+import gameApplication from '../index.js';
+import { getRandomNumber, isPrime } from '../utils.js';
 
 const isPrimeGame = () => {
   const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -16,4 +14,4 @@ const isPrimeGame = () => {
   gameApplication(gameRules, gameTask);
 };
 
-isPrimeGame();
+export default isPrimeGame;

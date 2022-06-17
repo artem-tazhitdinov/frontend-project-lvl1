@@ -1,7 +1,5 @@
-#!/usr/bin/env node
-
-import gameApplication from '../../src/index.js';
-import { getRandomNumber } from '../../src/utils.js';
+import gameApplication from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const gcdGame = () => {
   const gameRules = 'Find the greatest common divisor of given numbers.';
@@ -23,4 +21,4 @@ const gcdGame = () => {
   gameApplication(gameRules, gameTask);
 };
 
-gcdGame();
+export default gcdGame;
