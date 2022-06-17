@@ -1,5 +1,5 @@
-import gameApplication from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import runGameApp from '../index.js';
+import { getRandomByRange } from '../utils.js';
 
 const progressionGame = () => {
   const gameRules = 'What number is missing in the progression?';
@@ -18,15 +18,15 @@ const progressionGame = () => {
   };
 
   const gameTask = () => {
-    const progStep = getRandomNumber(15);
-    const progBegin = getRandomNumber();
-    const missingStep = getRandomNumber(10);
+    const progStep = getRandomByRange(15);
+    const progBegin = getRandomByRange();
+    const missingStep = getRandomByRange(10);
 
     const [gameQuestion, correctAnswer] = createProgression(progStep, progBegin, missingStep);
     return [gameQuestion, correctAnswer];
   };
 
-  gameApplication(gameRules, gameTask);
+  runGameApp(gameRules, gameTask);
 };
 
 export default progressionGame;

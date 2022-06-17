@@ -1,5 +1,5 @@
-import gameApplication from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import runGameApp from '../index.js';
+import { getRandomByRange } from '../utils.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -19,12 +19,12 @@ const isPrimeGame = () => {
   const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const gameTask = () => {
-    const gameQuestion = getRandomNumber();
+    const gameQuestion = getRandomByRange();
     const correctAnswer = isPrime(gameQuestion) ? 'yes' : 'no';
     return [gameQuestion, correctAnswer];
   };
 
-  gameApplication(gameRules, gameTask);
+  runGameApp(gameRules, gameTask);
 };
 
 export default isPrimeGame;

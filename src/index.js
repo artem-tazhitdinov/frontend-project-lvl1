@@ -1,6 +1,6 @@
 import { getUserName, getUserAnswer } from './utils.js';
 
-const gameApplication = (gameRules, gameTask) => {
+const runGameApplication = (gameRules, gameTask) => {
   const gameRounds = 3;
 
   console.log('Welcome to the Brain Games!');
@@ -24,4 +24,4 @@ const gameApplication = (gameRules, gameTask) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default gameApplication;
+export default runGameApplication;
