@@ -16,7 +16,7 @@ const calculateExpression = (n1, n2, operator) => {
   return n1 * n2;
 };
 
-const gameRule = 'What asd is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 
 const getGameTask = () => {
   const n1 = getRandomByRange();
