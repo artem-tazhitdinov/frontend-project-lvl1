@@ -3,11 +3,9 @@ import { getRandomByRange } from '../utils.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const getGameTask = () => {
-  let n1 = getRandomByRange(1);
-  let n2 = getRandomByRange(1);
-  const gameQuestion = `${n1} ${n2}`;
-
+const getGcd = (numberOne, numberTwo) => {
+  let n1 = numberOne;
+  let n2 = numberTwo;
   while (n1 !== n2) {
     if (n1 > n2) {
       n1 -= n2;
@@ -15,8 +13,15 @@ const getGameTask = () => {
       n2 -= n1;
     }
   }
+  return n1.toString();
+};
 
-  const correctAnswer = n1.toString();
+const getGameTask = () => {
+  const n1 = getRandomByRange(1);
+  const n2 = getRandomByRange(1);
+  const gameQuestion = `${n1} ${n2}`;
+
+  const correctAnswer = getGcd(n1, n2);
   return [gameQuestion, correctAnswer];
 };
 

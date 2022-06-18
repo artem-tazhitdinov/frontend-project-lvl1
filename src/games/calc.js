@@ -1,5 +1,10 @@
 import runGameApp from '../index.js';
-import { getRandomByRange, getRandomOperator } from '../utils.js';
+import { getRandomByRange } from '../utils.js';
+
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[Math.floor(Math.random() * operators.length)];
+};
 
 const calculateExpression = (n1, n2, operator) => {
   if (operator === '+') {
@@ -11,7 +16,7 @@ const calculateExpression = (n1, n2, operator) => {
   return n1 * n2;
 };
 
-const gameRule = 'What is the result of the expression?';
+const gameRule = 'What asd is the result of the expression?';
 
 const getGameTask = () => {
   const n1 = getRandomByRange();

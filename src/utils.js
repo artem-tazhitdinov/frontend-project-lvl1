@@ -5,11 +5,6 @@ export const getRandomByRange = (min = 1, max = 100) => {
   return result;
 };
 
-export const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  return operators[Math.floor(Math.random() * operators.length)];
-};
-
 export const getUserName = () => readlineSync.question('May I have your name? ');
 
 export const getUserAnswer = () => readlineSync.question('Your answer: ');
